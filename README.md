@@ -17,8 +17,10 @@ bun run build && bun run start
 
 Pinned Lucid packages: `@lucid-agents/core@5.0.0`, `@lucid-agents/http@4.0.0`, `@lucid-agents/payments@5.0.0`. OASF discovery uses `@lucid-agents/identity@5.0.0` (no auto-register).
 
-Live preview (quick tunnel; hostname rotates if the process restarts): https://annotation-ear-paint-join.trycloudflare.com
+Stable public preview: https://inference-chip-index-phi.vercel.app
 
-Public preview: Cloudflare Tunnel or OpenNext on Workers. See `docs/DEPLOYMENT.md`.
+Live tunnel (hostname rotates if restarted): https://annotation-ear-paint-join.trycloudflare.com
+
+Deployment notes: `docs/DEPLOYMENT.md`.
 
 Update / rollback: `docs/UPDATE.md`. Payments: `docs/PAYMENTS.md`. Sources: `DATA_SOURCES.md`.

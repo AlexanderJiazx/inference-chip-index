@@ -40,4 +40,6 @@ curl -X POST .../rank-inference-chips/invoke
 
 HTTP 503 `payment_configuration_error` when x402 env is absent.
 
+Stable public preview (2026-09-09): https://inference-chip-index-phi.vercel.app — health 200; OASF 200; home/leaderboard/methodology 200; preview invoke 200.
+
 Public tunnel (2026-09-09): https://annotation-ear-paint-join.trycloudflare.com — health 200; OASF 200. Earlier hostnames `southeast-signatures-nascar-seriously` and `francis-hamilton-offerings-blend` are dead.
