@@ -1,0 +1,34 @@
+{
+  "name": "inference-chip-index",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "next dev --port 3000",
+    "build": "next build",
+    "start": "next start --port 3000",
+    "type-check": "tsc --noEmit",
+    "test": "bun test",
+    "dataset:fixture": "bun scripts/build-dataset.ts --mode=fixture",
+    "dataset:full-source": "bun scripts/build-dataset.ts --mode=full-source"
+  },
+  "dependencies": {
+    "@lucid-agents/core": "5.0.0",
+    "@lucid-agents/http": "4.0.0",
+    "@lucid-agents/identity": "5.0.0",
+    "@lucid-agents/payments": "5.0.0",
+    "next": "^16.0.1",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "zod": "4.4.3"
+  },
+  "overrides": {
+    "zod": "4.4.3"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.1",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "typescript": "^5.9.2"
+  }
+}

@@ -1,0 +1,538 @@
+{
+  "datasetVersion": "50dd50b93fd65b8b",
+  "generatedAt": "2026-09-08T01:41:38.266Z",
+  "lastReviewedAt": "2026-09-08T01:41:38.266Z",
+  "freshness": "frozen-pinned-commit",
+  "mode": "fixture",
+  "release": "v6.0",
+  "sourceCommit": "4d3916ac9cf474b679cdfcf492d43a0559418ad1",
+  "sourceRepository": "https://github.com/mlcommons/inference_results_v6.0",
+  "metrics": [
+    {
+      "id": "tokens_per_second",
+      "canonicalUnit": "tokens/s",
+      "winningDirection": "higher",
+      "allowedWorkloads": [
+        "llama3.1-8b",
+        "gpt-oss-120b",
+        "deepseek-r1"
+      ],
+      "allowedScenarios": [
+        "Server",
+        "Interactive",
+        "Offline"
+      ],
+      "upstreamLogKeys": [
+        "Completed tokens per second"
+      ],
+      "validity": "MLPerf log must report Result is : VALID and satisfy duration/query/early-stopping constraints in the source log.",
+      "derivationAllowed": false
+    }
+  ],
+  "accelerators": [
+    {
+      "logicalId": "acc:nvidia-b300-sxm-270gb",
+      "contentVersionId": "6c3f31de9e8b75a5",
+      "slug": "nvidia-b300-sxm-270gb",
+      "vendor": "NVIDIA",
+      "family": "NVIDIA-B300",
+      "modelName": "NVIDIA B300-SXM-270GB",
+      "source": {
+        "repository": "https://github.com/mlcommons/inference_results_v6.0",
+        "commit": "4d3916ac9cf474b679cdfcf492d43a0559418ad1",
+        "path": "closed/NVIDIA/systems/B300-SXM-270GBx8_TRT.json",
+        "url": "https://github.com/mlcommons/inference_results_v6.0/blob/4d3916ac9cf474b679cdfcf492d43a0559418ad1/closed/NVIDIA/systems/B300-SXM-270GBx8_TRT.json",
+        "sha256": "fe6fb17a3c441b0ce3cb842275385125bac51fd0539864f66c95e86dd4769946"
+      },
+      "reviewRequired": false,
+      "reviewReasons": []
+    },
+    {
+      "logicalId": "acc:amd-instinct-mi355x-288gb-hbm3e",
+      "contentVersionId": "95b75063f06b7bdc",
+      "slug": "amd-instinct-mi355x-288gb-hbm3e",
+      "vendor": "AMD",
+      "family": "AMD-MI355X",
+      "modelName": "AMD Instinct MI355X 288GB HBM3e",
+      "source": {
+        "repository": "https://github.com/mlcommons/inference_results_v6.0",
+        "commit": "4d3916ac9cf474b679cdfcf492d43a0559418ad1",
+        "path": "closed/AMD/systems/8xMI355X_2xEPYC_9575F.json",
+        "url": "https://github.com/mlcommons/inference_results_v6.0/blob/4d3916ac9cf474b679cdfcf492d43a0559418ad1/closed/AMD/systems/8xMI355X_2xEPYC_9575F.json",
+        "sha256": "acc5f8384ee6258dc68bd7084b16e20a63f53d47e8268b8e8475613dc58ced9d"
+      },
+      "reviewRequired": false,
+      "reviewReasons": []
+    },
+    {
+      "logicalId": "acc:intel-arc-pro-b70",
+      "contentVersionId": "fd01e71c8942ebea",
+      "slug": "intel-arc-pro-b70",
+      "vendor": "Intel",
+      "family": "Intel-Battlemage",
+      "modelName": "Intel(R) Arc Pro(R) B70",
+      "source": {
+        "repository": "https://github.com/mlcommons/inference_results_v6.0",
+        "commit": "4d3916ac9cf474b679cdfcf492d43a0559418ad1",
+        "path": "closed/Intel/systems/1-node-4x-BMG-B70.json",
+        "url": "https://github.com/mlcommons/inference_results_v6.0/blob/4d3916ac9cf474b679cdfcf492d43a0559418ad1/closed/Intel/systems/1-node-4x-BMG-B70.json",
+        "sha256": "5a9dc5fd3fb3f9b838d1e558babd730ef3e40a02ac31037524cf1c79206ca6bb"
+      },
+      "reviewRequired": false,
+      "reviewReasons": []
+    }
+  ],
+  "systems": [
+    {
+      "logicalId": "sys:NVIDIA:nvidia-dgx-b300-8x-b300-sxm-270gb-tensorrt",
+      "contentVersionId": "a15002ae28c4a1a8",
+      "submitter": "NVIDIA",
+      "systemName": "NVIDIA DGX B300 (8x B300-SXM-270GB, TensorRT)",
+      "vendor": "NVIDIA",
+      "acceleratorsPerNode": 8,
+      "acceleratorSlug": "nvidia-b300-sxm-270gb",
+      "nodes": 1,
+      "source": {
+        "repository": "https://github.com/mlcommons/inference_results_v6.0",
+        "commit": "4d3916ac9cf474b679cdfcf492d43a0559418ad1",
+        "path": "closed/NVIDIA/systems/B300-SXM-270GBx8_TRT.json",
+        "url": "https://github.com/mlcommons/inference_results_v6.0/blob/4d3916ac9cf474b679cdfcf492d43a0559418ad1/closed/NVIDIA/systems/B300-SXM-270GBx8_TRT.json",
+        "sha256": "fe6fb17a3c441b0ce3cb842275385125bac51fd0539864f66c95e86dd4769946"
+      },
+      "reviewRequired": false,
+      "reviewReasons": [],
+      "status": "available"
+    },
+    {
+      "logicalId": "sys:AMD:smci355-ccs-aus-m09-17-as-4126gs-nmr-lcc",
+      "contentVersionId": "ba60f96f173f8887",
+      "submitter": "AMD",
+      "systemName": "smci355-ccs-aus-m09-17 (AS -4126GS-NMR-LCC)",
+      "vendor": "AMD",
+      "acceleratorsPerNode": 8,
+      "acceleratorSlug": "amd-instinct-mi355x-288gb-hbm3e",
+      "nodes": 1,
+      "source": {
+        "repository": "https://github.com/mlcommons/inference_results_v6.0",
+        "commit": "4d3916ac9cf474b679cdfcf492d43a0559418ad1",
+        "path": "closed/AMD/systems/8xMI355X_2xEPYC_9575F.json",
+        "url": "https://github.com/mlcommons/inference_results_v6.0/blob/4d3916ac9cf474b679cdfcf492d43a0559418ad1/closed/AMD/systems/8xMI355X_2xEPYC_9575F.json",
+        "sha256": "acc5f8384ee6258dc68bd7084b16e20a63f53d47e8268b8e8475613dc58ced9d"
+      },
+      "reviewRequired": false,
+      "reviewReasons": [],
+      "status": "available"
+    },
+    {
+      "logicalId": "sys:Intel:1-node-4x-bmg-b70",
+      "contentVersionId": "02f1450dead229a6",
+      "submitter": "Intel",
+      "systemName": "1-node-4x-BMG-B70",
+      "vendor": "Intel",
+      "acceleratorsPerNode": 4,
+      "acceleratorSlug": "intel-arc-pro-b70",
+      "nodes": 1,
+      "source": {
+        "repository": "https://github.com/mlcommons/inference_results_v6.0",
+        "commit": "4d3916ac9cf474b679cdfcf492d43a0559418ad1",
+        "path": "closed/Intel/systems/1-node-4x-BMG-B70.json",
+        "url": "https://github.com/mlcommons/inference_results_v6.0/blob/4d3916ac9cf474b679cdfcf492d43a0559418ad1/closed/Intel/systems/1-node-4x-BMG-B70.json",
+        "sha256": "5a9dc5fd3fb3f9b838d1e558babd730ef3e40a02ac31037524cf1c79206ca6bb"
+      },
+      "reviewRequired": false,
+      "reviewReasons": [],
+      "status": "preview"
+    },
+    {
+      "logicalId": "sys:ExampleVendor:mysterybox-x8",
+      "contentVersionId": "1ad8205a0947fffc",
+      "submitter": "ExampleVendor",
+      "systemName": "MysteryBox-x8",
+      "vendor": "ExampleVendor",
+      "acceleratorsPerNode": null,
+      "acceleratorSlug": null,
+      "nodes": 1,
+      "source": {
+        "repository": "https://github.com/mlcommons/inference_results_v6.0",
+        "commit": "4d3916ac9cf474b679cdfcf492d43a0559418ad1",
+        "path": "quarantine/mystery-x8.json",
+        "url": "https://github.com/mlcommons/inference_results_v6.0/blob/4d3916ac9cf474b679cdfcf492d43a0559418ad1/quarantine/mystery-x8.json",
+        "sha256": "ae4db21e3091ab51d21c8b27e1f040b631412d3f512e2d3b860fc817b10d1350"
+      },
+      "reviewRequired": true,
+      "reviewReasons": [
+        "accelerators_per_node not established in source; refusing to infer from names such as x8 or NVL72"
+      ],
+      "status": "available"
+    }
+  ],
+  "results": [
+    {
+      "logicalId": "res:Intel:sys:Intel:1-node-4x-bmg-b70:gpt-oss-120b:Server:tokens_per_second",
+      "contentVersionId": "168a2b43431de20e",
+      "systemLogicalId": "sys:Intel:1-node-4x-bmg-b70",
+      "acceleratorSlug": "intel-arc-pro-b70",
+      "submitter": "Intel",
+      "vendor": "Intel",
+      "family": "Intel-Battlemage",
+      "workload": "gpt-oss-120b",
+      "scenario": "Server",
+      "metricId": "tokens_per_second",
+      "unit": "tokens/s",
+      "value": 951.67,
+      "accuracyTarget": null,
+      "valid": true,
+      "reviewRequired": false,
+      "reviewReasons": [],
+      "source": {
+        "repository": "https://github.com/mlcommons/inference_results_v6.0",
+        "commit": "4d3916ac9cf474b679cdfcf492d43a0559418ad1",
+        "path": "closed/Intel/results/1-node-4x-BMG-B70/gpt-oss-120b/Server/performance/run_1/mlperf_log_summary.txt",
+        "url": "https://github.com/mlcommons/inference_results_v6.0/blob/4d3916ac9cf474b679cdfcf492d43a0559418ad1/closed/Intel/results/1-node-4x-BMG-B70/gpt-oss-120b/Server/performance/run_1/mlperf_log_summary.txt",
+        "sha256": "c5bad73cfb828345f0b930521588d94776e04aee2b4a12917d42052b7f7c8300"
+      }
+    },
+    {
+      "logicalId": "res:Intel:sys:Intel:1-node-4x-bmg-b70:gpt-oss-120b:Offline:tokens_per_second",
+      "contentVersionId": "365dec7ae672c41d",
+      "systemLogicalId": "sys:Intel:1-node-4x-bmg-b70",
+      "acceleratorSlug": "intel-arc-pro-b70",
+      "submitter": "Intel",
+      "vendor": "Intel",
+      "family": "Intel-Battlemage",
+      "workload": "gpt-oss-120b",
+      "scenario": "Offline",
+      "metricId": "tokens_per_second",
+      "unit": "tokens/s",
+      "value": 1536.9,
+      "accuracyTarget": null,
+      "valid": true,
+      "reviewRequired": false,
+      "reviewReasons": [],
+      "source": {
+        "repository": "https://github.com/mlcommons/inference_results_v6.0",
+        "commit": "4d3916ac9cf474b679cdfcf492d43a0559418ad1",
+        "path": "closed/Intel/results/1-node-4x-BMG-B70/gpt-oss-120b/Offline/performance/run_1/mlperf_log_summary.txt",
+        "url": "https://github.com/mlcommons/inference_results_v6.0/blob/4d3916ac9cf474b679cdfcf492d43a0559418ad1/closed/Intel/results/1-node-4x-BMG-B70/gpt-oss-120b/Offline/performance/run_1/mlperf_log_summary.txt",
+        "sha256": "6327212af65a99385677b3022d1f900f8ff66f4be1c8b91f5f92448973f4cd6e"
+      }
+    },
+    {
+      "logicalId": "res:Intel:sys:Intel:1-node-4x-bmg-b70:llama3.1-8b:Server:tokens_per_second",
+      "contentVersionId": "f09ceb089b26417e",
+      "systemLogicalId": "sys:Intel:1-node-4x-bmg-b70",
+      "acceleratorSlug": "intel-arc-pro-b70",
+      "submitter": "Intel",
+      "vendor": "Intel",
+      "family": "Intel-Battlemage",
+      "workload": "llama3.1-8b",
+      "scenario": "Server",
+      "metricId": "tokens_per_second",
+      "unit": "tokens/s",
+      "value": 4170.13,
+      "accuracyTarget": null,
+      "valid": true,
+      "reviewRequired": false,
+      "reviewReasons": [],
+      "source": {
+        "repository": "https://github.com/mlcommons/inference_results_v6.0",
+        "commit": "4d3916ac9cf474b679cdfcf492d43a0559418ad1",
+        "path": "closed/Intel/results/1-node-4x-BMG-B70/llama3_1-8b/Server/performance/run_1/mlperf_log_summary.txt",
+        "url": "https://github.com/mlcommons/inference_results_v6.0/blob/4d3916ac9cf474b679cdfcf492d43a0559418ad1/closed/Intel/results/1-node-4x-BMG-B70/llama3_1-8b/Server/performance/run_1/mlperf_log_summary.txt",
+        "sha256": "9434123385153fd0a7a28efb8707ed57493e709fbaa3a7d4a71e8185c7a4f421"
+      }
+    },
+    {
+      "logicalId": "res:Intel:sys:Intel:1-node-4x-bmg-b70:llama3.1-8b:Offline:tokens_per_second",
+      "contentVersionId": "a70ec3b7426fa43e",
+      "systemLogicalId": "sys:Intel:1-node-4x-bmg-b70",
+      "acceleratorSlug": "intel-arc-pro-b70",
+      "submitter": "Intel",
+      "vendor": "Intel",
+      "family": "Intel-Battlemage",
+      "workload": "llama3.1-8b",
+      "scenario": "Offline",
+      "metricId": "tokens_per_second",
+      "unit": "tokens/s",
+      "value": 4617.4,
+      "accuracyTarget": null,
+      "valid": true,
+      "reviewRequired": false,
+      "reviewReasons": [],
+      "source": {
+        "repository": "https://github.com/mlcommons/inference_results_v6.0",
+        "commit": "4d3916ac9cf474b679cdfcf492d43a0559418ad1",
+        "path": "closed/Intel/results/1-node-4x-BMG-B70/llama3_1-8b/Offline/performance/run_1/mlperf_log_summary.txt",
+        "url": "https://github.com/mlcommons/inference_results_v6.0/blob/4d3916ac9cf474b679cdfcf492d43a0559418ad1/closed/Intel/results/1-node-4x-BMG-B70/llama3_1-8b/Offline/performance/run_1/mlperf_log_summary.txt",
+        "sha256": "b75ab4a83cdb88d30af4d451675c12fbd2072da094c5883cc349d5d931a61b21"
+      }
+    },
+    {
+      "logicalId": "res:AMD:sys:AMD:smci355-ccs-aus-m09-17-as-4126gs-nmr-lcc:gpt-oss-120b:Server:tokens_per_second",
+      "contentVersionId": "8daa1316a0ee677a",
+      "systemLogicalId": "sys:AMD:smci355-ccs-aus-m09-17-as-4126gs-nmr-lcc",
+      "acceleratorSlug": "amd-instinct-mi355x-288gb-hbm3e",
+      "submitter": "AMD",
+      "vendor": "AMD",
+      "family": "AMD-MI355X",
+      "workload": "gpt-oss-120b",
+      "scenario": "Server",
+      "metricId": "tokens_per_second",
+      "unit": "tokens/s",
+      "value": 82136.08,
+      "accuracyTarget": null,
+      "valid": true,
+      "reviewRequired": false,
+      "reviewReasons": [],
+      "source": {
+        "repository": "https://github.com/mlcommons/inference_results_v6.0",
+        "commit": "4d3916ac9cf474b679cdfcf492d43a0559418ad1",
+        "path": "closed/AMD/results/8xMI355X_2xEPYC_9575F/gpt-oss-120b/Server/performance/run_1/mlperf_log_summary.txt",
+        "url": "https://github.com/mlcommons/inference_results_v6.0/blob/4d3916ac9cf474b679cdfcf492d43a0559418ad1/closed/AMD/results/8xMI355X_2xEPYC_9575F/gpt-oss-120b/Server/performance/run_1/mlperf_log_summary.txt",
+        "sha256": "989d211007a539131c1d39f9e7e695bb1d710426097c56a64681d00e010d0ef5"
+      }
+    },
+    {
+      "logicalId": "res:AMD:sys:AMD:smci355-ccs-aus-m09-17-as-4126gs-nmr-lcc:gpt-oss-120b:Offline:tokens_per_second",
+      "contentVersionId": "1e5a84f55ade8065",
+      "systemLogicalId": "sys:AMD:smci355-ccs-aus-m09-17-as-4126gs-nmr-lcc",
+      "acceleratorSlug": "amd-instinct-mi355x-288gb-hbm3e",
+      "submitter": "AMD",
+      "vendor": "AMD",
+      "family": "AMD-MI355X",
+      "workload": "gpt-oss-120b",
+      "scenario": "Offline",
+      "metricId": "tokens_per_second",
+      "unit": "tokens/s",
+      "value": 95004,
+      "accuracyTarget": null,
+      "valid": true,
+      "reviewRequired": false,
+      "reviewReasons": [],
+      "source": {
+        "repository": "https://github.com/mlcommons/inference_results_v6.0",
+        "commit": "4d3916ac9cf474b679cdfcf492d43a0559418ad1",
+        "path": "closed/AMD/results/8xMI355X_2xEPYC_9575F/gpt-oss-120b/Offline/performance/run_1/mlperf_log_summary.txt",
+        "url": "https://github.com/mlcommons/inference_results_v6.0/blob/4d3916ac9cf474b679cdfcf492d43a0559418ad1/closed/AMD/results/8xMI355X_2xEPYC_9575F/gpt-oss-120b/Offline/performance/run_1/mlperf_log_summary.txt",
+        "sha256": "49e74b2d5bb84008162af18d2a8129dce1c07b4170c8495e60ac5baf54e302cb"
+      }
+    },
+    {
+      "logicalId": "res:NVIDIA:sys:NVIDIA:nvidia-dgx-b300-8x-b300-sxm-270gb-tensorrt:gpt-oss-120b:Server:tokens_per_second",
+      "contentVersionId": "36374631ca249550",
+      "systemLogicalId": "sys:NVIDIA:nvidia-dgx-b300-8x-b300-sxm-270gb-tensorrt",
+      "acceleratorSlug": "nvidia-b300-sxm-270gb",
+      "submitter": "NVIDIA",
+      "vendor": "NVIDIA",
+      "family": "NVIDIA-B300",
+      "workload": "gpt-oss-120b",
+      "scenario": "Server",
+      "metricId": "tokens_per_second",
+      "unit": "tokens/s",
+      "value": 100327.65,
+      "accuracyTarget": null,
+      "valid": true,
+      "reviewRequired": false,
+      "reviewReasons": [],
+      "source": {
+        "repository": "https://github.com/mlcommons/inference_results_v6.0",
+        "commit": "4d3916ac9cf474b679cdfcf492d43a0559418ad1",
+        "path": "closed/NVIDIA/results/B300-SXM-270GBx8_TRT/gpt-oss-120b/Server/performance/run_1/mlperf_log_summary.txt",
+        "url": "https://github.com/mlcommons/inference_results_v6.0/blob/4d3916ac9cf474b679cdfcf492d43a0559418ad1/closed/NVIDIA/results/B300-SXM-270GBx8_TRT/gpt-oss-120b/Server/performance/run_1/mlperf_log_summary.txt",
+        "sha256": "27f8c5bd1e40d7b9bab72a1a16b794de14bf8286ed26ce1a206f2b1a97907dc1"
+      }
+    },
+    {
+      "logicalId": "res:NVIDIA:sys:NVIDIA:nvidia-dgx-b300-8x-b300-sxm-270gb-tensorrt:gpt-oss-120b:Offline:tokens_per_second",
+      "contentVersionId": "8c2c34e5e643f8e7",
+      "systemLogicalId": "sys:NVIDIA:nvidia-dgx-b300-8x-b300-sxm-270gb-tensorrt",
+      "acceleratorSlug": "nvidia-b300-sxm-270gb",
+      "submitter": "NVIDIA",
+      "vendor": "NVIDIA",
+      "family": "NVIDIA-B300",
+      "workload": "gpt-oss-120b",
+      "scenario": "Offline",
+      "metricId": "tokens_per_second",
+      "unit": "tokens/s",
+      "value": 103961,
+      "accuracyTarget": null,
+      "valid": true,
+      "reviewRequired": false,
+      "reviewReasons": [],
+      "source": {
+        "repository": "https://github.com/mlcommons/inference_results_v6.0",
+        "commit": "4d3916ac9cf474b679cdfcf492d43a0559418ad1",
+        "path": "closed/NVIDIA/results/B300-SXM-270GBx8_TRT/gpt-oss-120b/Offline/performance/run_1/mlperf_log_summary.txt",
+        "url": "https://github.com/mlcommons/inference_results_v6.0/blob/4d3916ac9cf474b679cdfcf492d43a0559418ad1/closed/NVIDIA/results/B300-SXM-270GBx8_TRT/gpt-oss-120b/Offline/performance/run_1/mlperf_log_summary.txt",
+        "sha256": "3fc9e3bb11fc2c560362834d11009701a66430cb19bb81e39c5bd4853f4c54ba"
+      }
+    },
+    {
+      "logicalId": "res:NVIDIA:sys:NVIDIA:nvidia-dgx-b300-8x-b300-sxm-270gb-tensorrt:llama3.1-8b:Server:tokens_per_second",
+      "contentVersionId": "7999dde6a26a29c7",
+      "systemLogicalId": "sys:NVIDIA:nvidia-dgx-b300-8x-b300-sxm-270gb-tensorrt",
+      "acceleratorSlug": "nvidia-b300-sxm-270gb",
+      "submitter": "NVIDIA",
+      "vendor": "NVIDIA",
+      "family": "NVIDIA-B300",
+      "workload": "llama3.1-8b",
+      "scenario": "Server",
+      "metricId": "tokens_per_second",
+      "unit": "tokens/s",
+      "value": 141565.45,
+      "accuracyTarget": null,
+      "valid": true,
+      "reviewRequired": false,
+      "reviewReasons": [],
+      "source": {
+        "repository": "https://github.com/mlcommons/inference_results_v6.0",
+        "commit": "4d3916ac9cf474b679cdfcf492d43a0559418ad1",
+        "path": "closed/NVIDIA/results/B300-SXM-270GBx8_TRT/llama3.1-8b/Server/performance/run_1/mlperf_log_summary.txt",
+        "url": "https://github.com/mlcommons/inference_results_v6.0/blob/4d3916ac9cf474b679cdfcf492d43a0559418ad1/closed/NVIDIA/results/B300-SXM-270GBx8_TRT/llama3.1-8b/Server/performance/run_1/mlperf_log_summary.txt",
+        "sha256": "b7407ca80b18c9c185bf9facf9cebf690ff03778dfb1c5d89d5813e2bc38503d"
+      }
+    },
+    {
+      "logicalId": "res:NVIDIA:sys:NVIDIA:nvidia-dgx-b300-8x-b300-sxm-270gb-tensorrt:llama3.1-8b:Offline:tokens_per_second",
+      "contentVersionId": "028e229de5353989",
+      "systemLogicalId": "sys:NVIDIA:nvidia-dgx-b300-8x-b300-sxm-270gb-tensorrt",
+      "acceleratorSlug": "nvidia-b300-sxm-270gb",
+      "submitter": "NVIDIA",
+      "vendor": "NVIDIA",
+      "family": "NVIDIA-B300",
+      "workload": "llama3.1-8b",
+      "scenario": "Offline",
+      "metricId": "tokens_per_second",
+      "unit": "tokens/s",
+      "value": 165432,
+      "accuracyTarget": null,
+      "valid": true,
+      "reviewRequired": false,
+      "reviewReasons": [],
+      "source": {
+        "repository": "https://github.com/mlcommons/inference_results_v6.0",
+        "commit": "4d3916ac9cf474b679cdfcf492d43a0559418ad1",
+        "path": "closed/NVIDIA/results/B300-SXM-270GBx8_TRT/llama3.1-8b/Offline/performance/run_1/mlperf_log_summary.txt",
+        "url": "https://github.com/mlcommons/inference_results_v6.0/blob/4d3916ac9cf474b679cdfcf492d43a0559418ad1/closed/NVIDIA/results/B300-SXM-270GBx8_TRT/llama3.1-8b/Offline/performance/run_1/mlperf_log_summary.txt",
+        "sha256": "95a6bd7cd7435f12f536bea03306ca0a36ff8a0262cc78c5fb150067ad636e33"
+      }
+    }
+  ],
+  "slices": [
+    {
+      "id": "v6.0|closed|gpt-oss-120b|Offline|official|tokens_per_second|tokens/s",
+      "release": "v6.0",
+      "division": "closed",
+      "workload": "gpt-oss-120b",
+      "scenario": "Offline",
+      "metricView": "official",
+      "metricId": "tokens_per_second",
+      "unit": "tokens/s",
+      "resultCount": 3,
+      "vendors": [
+        "AMD",
+        "Intel",
+        "NVIDIA"
+      ],
+      "families": [
+        "AMD-MI355X",
+        "Intel-Battlemage",
+        "NVIDIA-B300"
+      ],
+      "comparability": "Exact slice: MLPerf Inference v6.0, Closed division, workload gpt-oss-120b, scenario Offline, official submitted-system metric tokens_per_second in tokens/s. Incompatible dimensions are never mixed."
+    },
+    {
+      "id": "v6.0|closed|gpt-oss-120b|Server|official|tokens_per_second|tokens/s",
+      "release": "v6.0",
+      "division": "closed",
+      "workload": "gpt-oss-120b",
+      "scenario": "Server",
+      "metricView": "official",
+      "metricId": "tokens_per_second",
+      "unit": "tokens/s",
+      "resultCount": 3,
+      "vendors": [
+        "AMD",
+        "Intel",
+        "NVIDIA"
+      ],
+      "families": [
+        "AMD-MI355X",
+        "Intel-Battlemage",
+        "NVIDIA-B300"
+      ],
+      "comparability": "Exact slice: MLPerf Inference v6.0, Closed division, workload gpt-oss-120b, scenario Server, official submitted-system metric tokens_per_second in tokens/s. Incompatible dimensions are never mixed."
+    },
+    {
+      "id": "v6.0|closed|llama3.1-8b|Offline|official|tokens_per_second|tokens/s",
+      "release": "v6.0",
+      "division": "closed",
+      "workload": "llama3.1-8b",
+      "scenario": "Offline",
+      "metricView": "official",
+      "metricId": "tokens_per_second",
+      "unit": "tokens/s",
+      "resultCount": 2,
+      "vendors": [
+        "Intel",
+        "NVIDIA"
+      ],
+      "families": [
+        "Intel-Battlemage",
+        "NVIDIA-B300"
+      ],
+      "comparability": "Exact slice: MLPerf Inference v6.0, Closed division, workload llama3.1-8b, scenario Offline, official submitted-system metric tokens_per_second in tokens/s. Incompatible dimensions are never mixed."
+    },
+    {
+      "id": "v6.0|closed|llama3.1-8b|Server|official|tokens_per_second|tokens/s",
+      "release": "v6.0",
+      "division": "closed",
+      "workload": "llama3.1-8b",
+      "scenario": "Server",
+      "metricView": "official",
+      "metricId": "tokens_per_second",
+      "unit": "tokens/s",
+      "resultCount": 2,
+      "vendors": [
+        "Intel",
+        "NVIDIA"
+      ],
+      "families": [
+        "Intel-Battlemage",
+        "NVIDIA-B300"
+      ],
+      "comparability": "Exact slice: MLPerf Inference v6.0, Closed division, workload llama3.1-8b, scenario Server, official submitted-system metric tokens_per_second in tokens/s. Incompatible dimensions are never mixed."
+    }
+  ],
+  "tombstones": [],
+  "quarantine": [
+    {
+      "kind": "system",
+      "path": "quarantine/mystery-x8.json",
+      "reasons": [
+        "accelerators_per_node not established in source; refusing to infer from names such as x8 or NVL72"
+      ],
+      "source": {
+        "repository": "https://github.com/mlcommons/inference_results_v6.0",
+        "commit": "4d3916ac9cf474b679cdfcf492d43a0559418ad1",
+        "path": "quarantine/mystery-x8.json",
+        "url": "https://github.com/mlcommons/inference_results_v6.0/blob/4d3916ac9cf474b679cdfcf492d43a0559418ad1/quarantine/mystery-x8.json",
+        "sha256": "ae4db21e3091ab51d21c8b27e1f040b631412d3f512e2d3b860fc817b10d1350"
+      }
+    }
+  ],
+  "coverage": {
+    "nvidiaAccepted": true,
+    "amdAccepted": true,
+    "intelAccepted": true,
+    "multiAccelerator": true,
+    "quarantinePresent": true
+  },
+  "counts": {
+    "accelerators": 3,
+    "systems": 4,
+    "results": 10,
+    "slices": 4,
+    "quarantined": 1
+  }
+}

@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "system",
+    "path": "quarantine/mystery-x8.json",
+    "reasons": [
+      "accelerators_per_node not established in source; refusing to infer from names such as x8 or NVL72"
+    ],
+    "source": {
+      "repository": "https://github.com/mlcommons/inference_results_v6.0",
+      "commit": "4d3916ac9cf474b679cdfcf492d43a0559418ad1",
+      "path": "quarantine/mystery-x8.json",
+      "url": "https://github.com/mlcommons/inference_results_v6.0/blob/4d3916ac9cf474b679cdfcf492d43a0559418ad1/quarantine/mystery-x8.json",
+      "sha256": "ae4db21e3091ab51d21c8b27e1f040b631412d3f512e2d3b860fc817b10d1350"
+    }
+  }
+]

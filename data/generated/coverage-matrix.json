@@ -1,0 +1,102 @@
+{
+  "coverage": {
+    "nvidiaAccepted": true,
+    "amdAccepted": true,
+    "intelAccepted": true,
+    "multiAccelerator": true,
+    "quarantinePresent": true
+  },
+  "slices": [
+    {
+      "id": "v6.0|closed|gpt-oss-120b|Offline|official|tokens_per_second|tokens/s",
+      "release": "v6.0",
+      "division": "closed",
+      "workload": "gpt-oss-120b",
+      "scenario": "Offline",
+      "metricView": "official",
+      "metricId": "tokens_per_second",
+      "unit": "tokens/s",
+      "resultCount": 3,
+      "vendors": [
+        "AMD",
+        "Intel",
+        "NVIDIA"
+      ],
+      "families": [
+        "AMD-MI355X",
+        "Intel-Battlemage",
+        "NVIDIA-B300"
+      ],
+      "comparability": "Exact slice: MLPerf Inference v6.0, Closed division, workload gpt-oss-120b, scenario Offline, official submitted-system metric tokens_per_second in tokens/s. Incompatible dimensions are never mixed."
+    },
+    {
+      "id": "v6.0|closed|gpt-oss-120b|Server|official|tokens_per_second|tokens/s",
+      "release": "v6.0",
+      "division": "closed",
+      "workload": "gpt-oss-120b",
+      "scenario": "Server",
+      "metricView": "official",
+      "metricId": "tokens_per_second",
+      "unit": "tokens/s",
+      "resultCount": 3,
+      "vendors": [
+        "AMD",
+        "Intel",
+        "NVIDIA"
+      ],
+      "families": [
+        "AMD-MI355X",
+        "Intel-Battlemage",
+        "NVIDIA-B300"
+      ],
+      "comparability": "Exact slice: MLPerf Inference v6.0, Closed division, workload gpt-oss-120b, scenario Server, official submitted-system metric tokens_per_second in tokens/s. Incompatible dimensions are never mixed."
+    },
+    {
+      "id": "v6.0|closed|llama3.1-8b|Offline|official|tokens_per_second|tokens/s",
+      "release": "v6.0",
+      "division": "closed",
+      "workload": "llama3.1-8b",
+      "scenario": "Offline",
+      "metricView": "official",
+      "metricId": "tokens_per_second",
+      "unit": "tokens/s",
+      "resultCount": 2,
+      "vendors": [
+        "Intel",
+        "NVIDIA"
+      ],
+      "families": [
+        "Intel-Battlemage",
+        "NVIDIA-B300"
+      ],
+      "comparability": "Exact slice: MLPerf Inference v6.0, Closed division, workload llama3.1-8b, scenario Offline, official submitted-system metric tokens_per_second in tokens/s. Incompatible dimensions are never mixed."
+    },
+    {
+      "id": "v6.0|closed|llama3.1-8b|Server|official|tokens_per_second|tokens/s",
+      "release": "v6.0",
+      "division": "closed",
+      "workload": "llama3.1-8b",
+      "scenario": "Server",
+      "metricView": "official",
+      "metricId": "tokens_per_second",
+      "unit": "tokens/s",
+      "resultCount": 2,
+      "vendors": [
+        "Intel",
+        "NVIDIA"
+      ],
+      "families": [
+        "Intel-Battlemage",
+        "NVIDIA-B300"
+      ],
+      "comparability": "Exact slice: MLPerf Inference v6.0, Closed division, workload llama3.1-8b, scenario Server, official submitted-system metric tokens_per_second in tokens/s. Incompatible dimensions are never mixed."
+    }
+  ],
+  "counts": {
+    "accelerators": 3,
+    "systems": 4,
+    "results": 10,
+    "slices": 4,
+    "quarantined": 1
+  }
+}
